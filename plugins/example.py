@@ -1,6 +1,8 @@
-"""Example OASAS plugin. Copy this file to build your own drop-in commands.
+"""Example OASAS plugin. Copy this file to build your own drop-in commands
+You can fully manipulate with this shit so IDK maby , have my number? so call me babe, Yeah I just met u and this is crazy here 
+is my number so call me maybe
 
-Any .py file in plugins/ exposing register(api) is auto-loaded at shell start.
+Any .py file in plugins/ exposing register(api) is auto-loaded at shell start
 """
 
 
