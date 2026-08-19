@@ -1,4 +1,6 @@
-# OASAS
+# OASAS - Offensive Automation & Scope-Aware Suite
+
+### Very powerfull tool for agentic pentest and offensive security
 
 ---
 
