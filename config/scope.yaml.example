@@ -1,0 +1,51 @@
+# Authorization scope for Exploit Builder Framework.
+#
+# Nothing in this framework will actively touch a host (port scan, banner grab,
+# subdomain resolution, payload delivery) unless that host matches an entry
+# below. This file is your written authorization record — keep it accurate.
+#
+# Copy this file to scope.yaml and edit it before running any active module.
+#
+# Supported entry types:
+#   - single hostnames / IPs
+#   - CIDR ranges
+#   - "localhost" and RFC1918 ranges are convenient defaults for a home lab
+
+engagement:
+  name: "Home Lab / CTF Practice"
+  authorized_by: "self (personal lab)"
+  notes: "Only targets I own or am explicitly authorized to test (CTF platform, local VMs)."
+
+authorized_targets:
+  - 127.0.0.1
+  - localhost
+  - 192.168.56.0/24     # example: local VirtualBox host-only lab network
+  # - 10.10.10.10       # example: HackTheBox/TryHackMe assigned target IP
+  # - ctf-target.example.com
+
+# Hard denylist — always refused even if it matches an authorized range above.
+# Useful as a safety net against fat-fingering a CIDR.
+never_touch: []
+
+# Rules of Engagement (all optional). Enforced by ScopeGuard on every active
+# action, alongside the target check above.
+roe:
+  # Engagement validity window. Outside it, every active action is refused.
+  # Accepts a date (YYYY-MM-DD) or a full ISO datetime.
+  valid_from: null            # e.g. 2026-01-01
+  valid_until: null           # e.g. 2026-12-31  (inclusive, end-of-day)
+
+  # Allowed testing time windows (local time). If omitted, any time is allowed.
+  allowed_windows: []
+  #  - days: [mon, tue, wed, thu, fri]
+  #    start: "09:00"
+  #    end:   "18:00"
+
+  # Throttle outbound connections to stay within agreed limits.
+  rate_limit:
+    requests_per_second: null # e.g. 20
+    max_concurrency: null     # e.g. 50
+
+  # If true, active actions are logged to the audit trail but send no packets.
+  # Toggle live in the shell with: set dry-run on|off
+  dry_run: false

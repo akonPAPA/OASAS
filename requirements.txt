@@ -1,0 +1,15 @@
+click>=8.1.0
+pyyaml>=6.0
+rich>=13.7.0
+dnspython>=2.6.0
+jinja2>=3.1.0
+requests>=2.31.0
+prompt_toolkit>=3.0.0
+
+# Optional, only needed if you use the Anthropic provider:
+anthropic>=0.68.0
+
+# Optional extras (features degrade gracefully if absent):
+#   weasyprint   -> PDF report export  (export pdf)
+#   pysocks      -> SOCKS proxy routing (set proxy socks5://...)
+# External tools auto-detected if on PATH: nmap, nuclei, msfvenom

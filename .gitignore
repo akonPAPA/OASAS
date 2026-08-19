@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+.env
+config/scope.yaml
+config/llm.yaml
+config/oasas.yaml
+reports/*.md
+reports/*.html
+reports/*.json
+reports/*.pdf
+reports/*.log
+reports/.oasas_history
+reports/poc/
+workspaces/*.db

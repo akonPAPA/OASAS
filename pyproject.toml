@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oasas"
+version = "0.1.0"
+description = "OASAS — Offensive Automation & Scope-Aware Suite: scope-gated recon, payload templating, and multi-LLM AI assistance for labs & CTFs."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "aknxpp / sigmawolf" }]
+dependencies = [
+    "click>=8.1.0",
+    "pyyaml>=6.0",
+    "rich>=13.7.0",
+    "dnspython>=2.6.0",
+    "jinja2>=3.1.0",
+    "requests>=2.31.0",
+    "prompt_toolkit>=3.0.0",
+]
+
+[project.optional-dependencies]
+anthropic = ["anthropic>=0.68.0"]
+
+[project.scripts]
+oasas = "exploit_builder.cli:cli"
+ebf = "exploit_builder.cli:cli"
+
+[tool.setuptools.packages.find]
+include = ["exploit_builder*"]

@@ -1,0 +1,18 @@
+# OASAS user config (all optional). Copy to config/oasas.yaml.
+# CLI flags and env vars still override these.
+
+# Default LLM backend (see config/llm.yaml for backend details)
+provider: null            # anthropic | ollama | openai_compatible
+model: null               # model id for that provider
+
+theme: matrix             # matrix | amber | ice | blood | mono
+animate: true             # animated intro + effects
+
+proxy: null               # e.g. socks5://127.0.0.1:9050  (needs pysocks for SOCKS)
+wordlist: null            # default wordlist path for dirscan
+
+# Quick-command macros — your own shortcuts, expanded in the shell.
+# Typing the key runs the value (trailing args are appended).
+quick_commands:
+  # full: "recon FUZZ analyze report"     # (example — edit for your workflow)
+  # sweep: "services"

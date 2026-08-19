@@ -1,0 +1,28 @@
+# LLM backend configuration for Exploit Builder Framework.
+#
+# Copy to config/llm.yaml and edit. The `provider` key selects which backend
+# is used by default; override per-run with `--provider` / `--model` or the
+# EBF_PROVIDER / EBF_MODEL environment variables.
+#
+# Selection precedence (highest first):
+#   1. CLI flags   --provider / --model
+#   2. env vars    EBF_PROVIDER / EBF_MODEL
+#   3. this file
+#   4. built-in default (anthropic / claude-opus-5)
+
+provider: anthropic        # anthropic | ollama | openai_compatible
+
+anthropic:
+  model: claude-opus-5     # any Claude model id; uses ANTHROPIC_API_KEY from env
+  effort: medium           # low | medium | high | xhigh | max
+
+ollama:
+  host: http://localhost:11434
+  model: llama3.1          # any locally pulled model, e.g. ornith:9B, qwen2.5, mistral
+
+openai_compatible:
+  # Works with OpenAI, Groq, Together, OpenRouter, DeepSeek, Mistral,
+  # and local servers (vLLM, llama.cpp, LM Studio, Ollama's /v1 endpoint).
+  base_url: https://api.openai.com/v1   # e.g. http://localhost:8000/v1 for local
+  api_key_env: OPENAI_API_KEY           # env var holding the key (local servers often need none)
+  model: gpt-4o-mini
