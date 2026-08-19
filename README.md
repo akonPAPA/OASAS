@@ -399,4 +399,6 @@ MIT licensed. Made by aknxpp / sigmawolf.
 
 ## Soon I'll end fully fine tunning my LLM and make it ready for cybersecurity auto-offensive usage ASAP, and I'll make it uncensored
 
-![usage example](config/terminal-pic.png)
+---
+
+![67](config/terminal-pic.png)
