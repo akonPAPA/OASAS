@@ -1,6 +1,6 @@
-# OASAS - Offensive Automation & Scope-Aware Suite
+# <span style="color:red">OASAS - Offensive Automation & Scope-Aware Suite </span>
 
-### Very powerfull tool for agentic pentest and offensive security
+### <span style="color:green"> Very powerfull tool for agentic pentest and offensive security </span>
 
 ---
 
@@ -264,6 +264,7 @@ oasas> exploit-suggest CVE-2021-41773
   through a path-traversal-safe extractor (rejects `../` escapes, symlinks, and
   device members). `reports/poc/` is gitignored — downloaded third-party code
   never enters your repo.
+- But you can always download extra-module for it if you want of course
 
 ---
 
@@ -394,3 +395,8 @@ authorization. Downloaded PoC code (`reports/poc/`) is untrusted third-party
 material — read it before running anything.
 
 MIT licensed. Made by aknxpp / sigmawolf.
+
+
+## Soon I'll end fully fine tunning my LLM and make it ready for cybersecurity auto-offensive usage ASAP, and I'll make it uncensored
+
+![usage example](condig/terminal-pic.png)
